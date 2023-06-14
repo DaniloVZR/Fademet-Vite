@@ -1,0 +1,91 @@
+.ProyectoCard {
+  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+
+.CardContent {
+  background-color: rgb(18, 18, 18);
+  width: 100%;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  box-shadow:
+    rgba(229, 97, 26, 0.4) 5px 5px,
+    rgba(232, 144, 29, 0.3) 10px 10px,
+    rgba(237, 122, 34, 0.2) 15px 15px,
+    rgba(230, 72, 24, 0.1) 20px 20px,
+    rgba(226, 101, 23, 0.05) 25px 25px;
+}
+
+.CardContent h3 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-bottom: .4rem;
+  text-transform: uppercase;
+  --border: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 3px solid;
+  margin-bottom: 2rem;
+  border-image: linear-gradient(to left, #ea5358, #f7ba2b) 1;
+}
+
+.CardContent p {
+  font-size: 18px;
+}
+
+.swiperImage {
+  height: 350px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.slideImage>div {
+  display: flex;
+  justify-content: center;
+}
+
+.slideImage {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+@media (min-width: 950px) {
+  .ProyectoCard {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+  }
+
+  .ProyectoCard:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .CardContent {
+    margin-bottom: 0;
+    width: 500px;
+  }
+
+  .CardContent h3 {
+    width: 400px;
+  }
+
+  .slideImage {
+    height: 500px;
+  }
+
+  .swiperImage {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .slideImage {
+    height: 600px;
+  }
+
+  .swiperImage {
+    height: 600px;
+  }
+}

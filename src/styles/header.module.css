@@ -1,0 +1,135 @@
+.header {
+  background: linear-gradient(90deg, rgba(5, 5, 5, 1) 0%, rgba(29, 29, 29, 1) 48%, rgba(5, 5, 5, 1) 100%);
+  box-shadow: 0 2px 20px #d95f18;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.headerShow {
+  z-index: 99;
+}
+
+.headerHidden {
+  z-index: -1;
+}
+
+.header div {
+  padding: .2rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo_text {
+  color: #f3f3f3;
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.logo_text span {
+  color: #abaaa9;
+}
+
+.nav {
+  display: none;
+}
+
+.nav a {
+  color: #e7e7e7;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  position: relative;
+  padding: 1rem;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #d95f18;
+  transition: .5s ease;
+}
+
+.nav a:hover {
+  color: #ffffff;
+  transition-delay: .5s;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.nav a:last-of-type {
+  margin: 0;
+}
+
+.responsive {
+  color: #f3f3f3;
+}
+
+.menu {
+  padding: 1rem;
+}
+
+.menu_nav {
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgb(5, 5, 5, 80%);
+  color: #e7e7e7;
+  width: max-content;
+  padding: 1rem;
+  border-radius: .5rem;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+.menu_nav ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.menu_nav ul li {
+  margin-bottom: 15px;
+}
+
+.menu_nav ul li:hover {
+  color: #d95f18;
+}
+
+.menu_nav ul li:last-child {
+  margin-bottom: 0px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 950px) {
+  .nav {
+    display: unset;
+  }
+
+  .responsive {
+    display: none;
+  }
+
+  .menu_nav {
+    display: none;
+  }
+}
