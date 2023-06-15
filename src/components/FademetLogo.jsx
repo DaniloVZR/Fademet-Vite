@@ -3,7 +3,7 @@ import imgLogo from "../assets/img/logo.webp"
 import { scrollToTop } from "../helpers";
 import styles from "../styles/header.module.css"
 
-const Logo = () => {
+const FademetLogo = () => {
   return (
     <Link onClick={scrollToTop} to='/'>
       <div className={styles.logo}>
@@ -21,4 +21,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default FademetLogo;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Logo from "./logo"
+import Logo from "./FademetLogo"
 import container from "../styles/container.module.css"
 import styles from "../styles/footer.module.css"
 import { scrollToTop, scrollTo } from "../helpers"

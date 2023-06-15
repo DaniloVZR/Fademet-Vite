@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { scrollToTop, scrollTo } from "../helpers";
-import Logo from "./logo";
+import Logo from "./FademetLogo";
 import container from "../styles/container.module.css"
 import flex from "../styles/flex.module.css"
 import styles from "../styles/header.module.css"
