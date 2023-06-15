@@ -8,6 +8,7 @@
 .footer_content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 2rem;
   padding: 4rem 0;
   border-bottom: 2px solid #b1adad;
@@ -55,9 +56,13 @@
   gap: .5rem;
 }
 
+.correo {
+  word-break: break-all;
+}
+
 /* RESPONSIVE */
 
-@media (min-width: 950px) {
+@media (min-width: 1230px) {
   .footer_content {
     display: flex;
     flex-direction: row;
@@ -74,5 +79,9 @@
 
   .footerInfo>div>h3 {
     width: 100%;
+  }
+
+  .correo {
+    word-break: normal
   }
 }

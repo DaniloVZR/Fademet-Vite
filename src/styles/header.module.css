@@ -120,7 +120,7 @@
 
 /* RESPONSIVE */
 
-@media (min-width: 950px) {
+@media (min-width: 1030px) {
   .nav {
     display: unset;
   }

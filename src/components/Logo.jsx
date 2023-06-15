@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import imgLogo from "../assets/img/logo.webp"
 import { scrollToTop } from "../helpers";
 import styles from "../styles/header.module.css"
 
@@ -9,7 +10,7 @@ const Logo = () => {
         <img
           onMouseOver={(e) => e.currentTarget.classList.add("fa-spin")}
           onMouseOut={(e) => e.currentTarget.classList.remove("fa-spin")}
-          src="/img/logo.png"
+          src={imgLogo}
           alt="Logo Fademet"
           height={70}
           width={70}

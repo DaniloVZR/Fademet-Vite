@@ -1,0 +1,29 @@
+.noPage {
+  padding: 2rem;
+  height: 60vh;
+  background-color: rgb(239, 239, 239);
+  display: flex;
+  justify-content: center;
+}
+
+.noPage h1 {
+  font-size: 1.2rem;
+}
+
+.noPage p {
+  font-size: .8rem;
+}
+
+.noPage a {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .noPage h1 {
+    font-size: 2rem;
+  }
+
+  .noPage p {
+    font-size: 1.5rem;
+  }
+}

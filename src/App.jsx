@@ -4,6 +4,7 @@ import Galeria from "./pages/Galeria"
 import Proyectos from "./pages/Proyectos"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import NoPage from "./pages/NoPage"
 import { FademetProvider } from "./context/FademetProvider"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" Component={Home} />
           <Route exact path="/Galería" Component={Galeria} />
           <Route exact path="/Proyectos" Component={Proyectos} />
+          <Route exact path="*" Component={NoPage} />
         </Routes>
         <Footer />
       </BrowserRouter>

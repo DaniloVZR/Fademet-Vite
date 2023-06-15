@@ -58,7 +58,7 @@
 }
 
 .eligenos__photo::before {
-  background-image: url(../img/eligenos.jpg);
+  background-image: url(../assets/img/eligenos.webp);
   background-size: cover;
   content: "";
   position: absolute;

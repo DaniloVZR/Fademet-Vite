@@ -14,8 +14,6 @@ export default function Proyectos() {
     getProyectos()
   }, [])
 
-  console.log(proyectos);
-
   return (
     <section className={`${container.container} ${container.margin_nav} ${styles.proyectos} animate__animated animate__fadeIn`}>
       <div className={section.sectionTitle}>
