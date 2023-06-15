@@ -1,6 +1,6 @@
 import { servicesList } from "../helpers"
 import { useEffect } from "react"
-import BtnCotizacion from "./btnCotizacion"
+import BtnCotizacion from "./BtnCotizacion"
 import AOS from "aos"
 import 'aos/dist/aos.css'
 import section from "../styles/sections.module.css"

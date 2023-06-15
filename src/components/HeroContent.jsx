@@ -1,4 +1,4 @@
-import BtnCotizacion from "./btnCotizacion"
+import BtnCotizacion from "./BtnCotizacion"
 import { scrollTo } from "../helpers"
 import styles from "../styles/heroContent.module.css"
 
