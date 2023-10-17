@@ -19,7 +19,7 @@ const ProyectoCard = ({ proyecto }) => {
     });
   }, []);
 
-  const { titulo, ubicacion, descripcion, fotos } = proyecto
+  const { titulo, ubicacion, descripcion, imagenes } = proyecto
 
   return (
     <div className={styles.ProyectoCard} data-aos="fade-up">
@@ -38,10 +38,10 @@ const ProyectoCard = ({ proyecto }) => {
         modules={[Pagination, Navigation]}
         className={`${styles.swiperImage} mySwiper`}
       >
-        {fotos.data.map((foto) => (
+        {imagenes.map((foto) => (
           <SwiperSlide>
             <img
-              src={foto.attributes.url}
+              src={foto}
               alt={titulo}
               className={styles.slideImage}
             />

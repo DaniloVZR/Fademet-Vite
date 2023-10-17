@@ -1,17 +1,14 @@
 import { useEffect } from "react"
 import ProyectoCard from "../components/ProyectoCard"
-import useFademet from "../hooks/useFademet"
 import styles from "../styles/proyectos.module.css"
 import container from "../styles/container.module.css"
 import section from "../styles/sections.module.css"
+import { proyectosArray } from "../helpers/imagesProyectos"
 
 export default function Proyectos() {
-  const { getProyectos, proyectos } = useFademet()
 
   useEffect(() => {
     document.title = "FADEMET - Proyectos"
-
-    getProyectos()
   }, [])
 
   return (
@@ -22,10 +19,10 @@ export default function Proyectos() {
       </div>
       <div className={styles.ProyectoBox}>
         {
-          proyectos.map((proyecto) => (
+          proyectosArray.map((proyecto) => (
             <ProyectoCard
-              key={proyecto.attributes.url}
-              proyecto={proyecto.attributes}
+              key={proyecto.id}
+              proyecto={proyecto}
             />
           ))
         }

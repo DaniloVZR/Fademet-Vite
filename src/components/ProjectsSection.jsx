@@ -1,15 +1,9 @@
 import { Link } from 'react-router-dom'
 import styles from "../styles/projectsSection.module.css"
 import section from "../styles/sections.module.css"
-import useFademet from '../hooks/useFademet';
-import { useEffect } from 'react';
+import { proyectosArray } from '../helpers/imagesProyectos';
 
 export default function ProjectsSection() {
-  const { proyectos, getProyectos } = useFademet()
-
-  useEffect(() => {
-    getProyectos()
-  }, [])
 
   const handleClick = () => {
     window.scrollTo(0, 0);
@@ -23,25 +17,25 @@ export default function ProjectsSection() {
       </div>
       <div className={styles.ProjHome__cards__container}>
         {
-          proyectos.slice(0, 3).map((proyecto) => (
+          proyectosArray.slice(0, 3).map((proyecto) => (
             <Link
               onClick={handleClick}
               className={styles.ProjLink}
               to={`/Proyectos`}
-              key={proyecto.attributes.url}
+              key={proyecto.id}
             >
               <section className={styles.ProjHome__card}>
                 <div className={styles.ProjImg}>
                   <div className={styles.ProjHome__img_overlayer} />
                   <img
-                    src={proyecto.attributes.fotos.data[0].attributes.url}
-                    alt={proyecto.attributes.titulo}
+                    src={proyecto.imagenes[0]}
+                    alt={proyecto.titulo}
                   />
                   <footer className={styles.ProjHome__imgText}>
                     <div>
-                      <h4>{proyecto.attributes.titulo}</h4>
+                      <h4>{proyecto.titulo}</h4>
                       <p><i className="fa-sharp fa-solid fa-location-dot fa-lg"></i>&nbsp;
-                        <span>{proyecto.attributes.ubicacion}</span></p>
+                        <span>{proyecto.ubicacion}</span></p>
                     </div>
                   </footer>
                 </div>
