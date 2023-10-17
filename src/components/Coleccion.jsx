@@ -3,9 +3,10 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import container from "../styles/container.module.css"
 import section from "../styles/sections.module.css"
 import styles from "../styles/coleccion.module.css"
+import { coleccionArray } from "../helpers/imagesColeccion";
 import useFademet from "../hooks/useFademet";
 
-export default function Coleccion({ coleccion }) {
+export default function Coleccion() {
 
   const { ocultarNav } = useFademet()
 
@@ -33,12 +34,12 @@ export default function Coleccion({ coleccion }) {
 
   const prevSlide = () => {
     slideNumber === 0 ?
-      setSlideNumber(coleccion.length - 1)
+      setSlideNumber(coleccionArray.length - 1)
       : setSlideNumber(slideNumber - 1)
   };
 
   const nextSlide = () => {
-    slideNumber + 1 === coleccion.length ?
+    slideNumber + 1 === coleccionArray.length ?
       setSlideNumber(0)
       : setSlideNumber(slideNumber + 1)
   };
@@ -71,11 +72,11 @@ export default function Coleccion({ coleccion }) {
             <div className={`${styles.fullScreenImage} animate__animated animate__fadeInDown`}>
               <div className={styles.fullScreenImage__container}>
                 <img
-                  src={coleccion[slideNumber]?.attributes.imagen.data.attributes.url}
-                  alt={coleccion[slideNumber]?.attributes.titulo} />
+                  src={coleccionArray[slideNumber]?.imagen}
+                  alt={coleccionArray[slideNumber]?.titulo} />
 
                 <footer className={styles.fullScreenImage__footer}>
-                  {coleccion[slideNumber]?.attributes.titulo} - {coleccion[slideNumber].attributes.ubicacion}
+                  {coleccionArray[slideNumber]?.titulo} - {coleccionArray[slideNumber].ubicacion}
                 </footer>
               </div>
             </div>
@@ -93,15 +94,15 @@ export default function Coleccion({ coleccion }) {
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1350: 4 }}>
               <Masonry gutter="15px">
-                {coleccion.map((imagenes, i) => (
+                {coleccionArray.map((imagenes, i) => (
                   <img
                     key={i}
                     width={550}
                     height={300}
                     loading="lazy"
                     className={styles.coleccionImage}
-                    src={imagenes.attributes.imagen.data.attributes.formats.large.url}
-                    alt={imagenes.attributes.titulo}
+                    src={imagenes.imagen}
+                    alt={imagenes.titulo}
                     onClick={() => handleOpenModal(i)}
                   />
                 ))}

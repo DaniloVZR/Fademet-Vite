@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import styles from "../styles/about.module.css"
-import container from "../styles/container.module.css"
 import section from "../styles/sections.module.css"
 
 export default function About() {
@@ -22,7 +21,7 @@ export default function About() {
           </div>
           <div className={`${styles.aboutSection} ${section.sectionTitle}`} data-aos="flip-up">
             <h1>Visión<i className="fa-sharp fa-regular fa-eye"></i></h1>
-            <p>En FADEMET para el 2022 pretendemos consolidar nuestra empresa como líder en el mercado y sector metalmecánico, brindando por medio de nuestros productos confianza, calidad, cumplimiento en tiempos de entrega, logrando de esta forma la satisfacción de todos nuestros clientes y empleados.</p>
+            <p>En FADEMET para el 2025 pretendemos consolidar nuestra empresa como líder en el mercado y sector metalmecánico, brindando por medio de  nuestros productos confianza, calidad, cumplimiento en tiempos de entrega,  logrando de esta forma la satisfacción de todos nuestros clientes y  empleados.</p>
           </div>
         </div>
       </div>

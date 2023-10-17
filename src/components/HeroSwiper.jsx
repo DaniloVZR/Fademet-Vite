@@ -1,19 +1,19 @@
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper'
+// Import Carrusel Images
+import { carruselArray } from '../helpers/imagesCarrusel'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
 import styles from "../styles/heroSwiper.module.css"
 
-export default function HeroSwiper({ carrusel }) {
-  const ImagenesArray = carrusel?.attributes?.imagenes?.data
+export default function HeroSwiper() {
 
   return (
     <Swiper
       loop={true}
       navigation={{
-        nextEl: '.swiper-button-next',
         nextEl: '.swiper-button-next',
       }}
       modules={[Navigation, Autoplay]}
@@ -24,14 +24,12 @@ export default function HeroSwiper({ carrusel }) {
       className={`${styles.carousel} animate__animated animate__fadeIn`}
     >
       {
-        ImagenesArray?.map(imagen => (
-          <SwiperSlide key={imagen?.id}>
+        carruselArray?.map(foto => (
+          <SwiperSlide key={foto?.id}>
             <img
               className={styles.carousel_img}
-              src={imagen?.attributes?.url}
-              alt={imagen?.attributes?.name}
-              width={1200}
-              height={1000}
+              src={foto?.imagen}
+              alt="Imagen Carrusel"
             />
           </SwiperSlide>
         ))
