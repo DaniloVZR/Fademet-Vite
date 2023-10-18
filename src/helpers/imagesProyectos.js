@@ -16,7 +16,7 @@ export const proyectosArray = [
     imagenes: [p1_01, p1_02, p1_03, p1_04],
     titulo: "Estructura Casa en Llano Grande",
     ubicacion: "Llano Grande, Antioquia",
-    descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis turpis lobortis scelerisque placerat. Phasellus tincidunt felis vitae elit viverra, in bibendum erat aliquam."
+    descripcion: "Creación de estructura metálica para casa en Llano Grande."
   },
   {
     id: 2,
