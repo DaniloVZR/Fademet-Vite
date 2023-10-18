@@ -54,7 +54,7 @@ export default function Footer() {
               <p>+57 314 756 1960 </p>
               <p>+57 317 503 0339 </p>
               <p><strong>Correo:</strong></p>
-              <p className={styles.correo}>fademetmontajes@gmail.com </p>
+              <p className={styles.correo}>fademetasesorias@gmail.com </p>
               <div className={styles.socialMedia}>
                 <a href="https://api.whatsapp.com/send/?phone=573147561960&text&type=phone_number&app_absent=0" target="_blank" className="footer-social-i wpp">
                   <i className="fa-brands fa-whatsapp fa-2x"></i>
